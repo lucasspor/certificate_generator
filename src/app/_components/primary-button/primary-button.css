@@ -1,0 +1,16 @@
+.custom-button {
+  height: 3rem;
+  padding: .75rem;
+  border: none;
+  border-radius: 6px;
+
+  font-size: 1rem;
+  color: #fff;
+
+  background: linear-gradient(90deg, #1A2856 0%, #334EA9 100%);
+  cursor: pointer;
+}
+
+.custom-button:hover{
+  opacity: 90%;
+}
