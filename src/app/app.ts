@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./_components/navbar/navbar";
-import { CertificateItem } from "./_components/certificate-item/certificate-item";
 import { BaseUI } from "./_components/base-ui/base-ui";
+import { Certificates } from "./pages/certificates/certificates";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, CertificateItem, BaseUI],
+  imports: [RouterOutlet, Navbar, BaseUI, Certificates],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
