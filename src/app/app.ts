@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./_components/navbar/navbar";
 import { BaseUI } from "./_components/base-ui/base-ui";
 import { Certificates } from "./pages/certificates/certificates";
+// import { CertificateItem } from "./_components/certificate-item/certificate-item";
+import { CertificateForm } from "./pages/certificate-form/certificate-form";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, BaseUI, Certificates],
+  imports: [RouterOutlet, Navbar, BaseUI,/* Certificates, CertificateItem,*/CertificateForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

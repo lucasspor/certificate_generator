@@ -20,3 +20,12 @@
 .group-activity{
   margin-bottom: 2rem;
 }
+
+label{
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 142%;
+  letter-spacing: 0;
+
+  color: #1A2856;
+}
