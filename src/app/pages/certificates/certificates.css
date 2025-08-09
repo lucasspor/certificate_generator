@@ -5,6 +5,7 @@
 
   letter-spacing: 0;
   text-align: center;
+  color: #121621;
 }
 
 .custom-subtitle{
@@ -20,4 +21,45 @@
 .content-titles{
   height: 3.75rem;
   gap: .25rem;
+  margin-bottom: 2rem;
 }
+
+.custom-card{
+  display: flex;
+  max-width: 42rem;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding: 3rem 2rem 3.5rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+}
+
+.custom-card i {
+  font-size: 3rem;
+  color: #64748B;
+}
+
+.custom-warning-titles {
+  gap: 0.125rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 142.86%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #1A2856;
+}
+
+.card-subtitle {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 133.33%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #64748B;
+}
+
