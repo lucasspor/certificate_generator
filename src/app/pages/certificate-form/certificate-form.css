@@ -72,3 +72,12 @@ label {
   border-radius: 6px;
   padding: .5rem .75rem;
 }
+
+.custom-input:focus{
+  border: 1px solid #3B5AC2;
+  box-shadow: none;
+}
+
+.wrapper:focus-within label {
+  color: #3B5AC2;
+}
