@@ -81,3 +81,26 @@ label {
 .wrapper:focus-within label {
   color: #3B5AC2;
 }
+
+.error-message{
+  gap: .25rem;
+  color: #D71D1D;
+  margin-top: .5rem;
+}
+
+.error-message p{
+  font-weight: 400;
+  font-size: .75rem;
+  line-height: 143%;
+  letter-spacing: 0;
+
+  vertical-align: middle;
+}
+
+.wrapper:has(.error-message) label{
+  color: #D71D1D;
+}
+
+.wrapper:has(.error-message) input{
+  border: 1px solid #D71D1D;
+}
