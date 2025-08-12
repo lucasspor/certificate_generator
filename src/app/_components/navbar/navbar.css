@@ -2,12 +2,35 @@
   background-color: #ffffff;
   padding: 1rem 2rem;
   border-bottom: 1px solid #e2e8f0;
+  padding: 1.625rem 1.75rem 1.625rem .75rem;
+}
+
+.navbar-nav{
+  gap: 1.2rem;
 }
 
 .navbar-logo img {
   height: 2.5rem;
 }
 
+.nav-item i {
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.active {
+  color: #3B5AC2;
+}
+
+.nav-link{
+  padding: .375 !important;
+  cursor: pointer;
+}
+
 .nav-link.active {
   color: #3B5AC2;
+  font-weight: 600;
 }

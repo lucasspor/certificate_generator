@@ -11,6 +11,7 @@ p{
 
 .back-btn {
     gap: .375rem;
+    cursor: pointer;
 }
 
 .back-btn i {
@@ -132,7 +133,7 @@ p{
     height: 4rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 765px) {
     .certificate{
         height: auto;
         padding: 2rem;
