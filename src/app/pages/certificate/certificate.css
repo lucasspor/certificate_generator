@@ -128,3 +128,16 @@ p{
     width: 4rem;
     height: 4rem;
 }
+
+@media (max-width: 960px) {
+    .certificate{
+        height: auto;
+        padding: 2rem;
+    }
+
+    .certificate-content{
+        margin: 0;
+        padding: 2rem;
+        height: auto;
+    }
+}
