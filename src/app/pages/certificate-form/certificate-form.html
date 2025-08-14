@@ -7,7 +7,7 @@
     <h2 class="card-title">Novo certificado</h2>
     <div class="mb-3 wrapper">
       <label class="form-label" for="name">Nome completo</label>
-      <input type="text" class="form-control custom-input" id="name" placeholder="Nome do aluno">
+      <input [(ngModel)]="name" type="text" class="form-control custom-input" id="name" placeholder="Nome do aluno">
       <div class="error-message d-flex align-items-center">
         <i class="ph ph-warning-circle"></i>
         <p class="m-0">Error message</p>
@@ -16,20 +16,25 @@
     <div class="mb-3 d-flex align-items-end">
       <div class="flex-grow-1 me-2 wrapper">
         <label class="form-label" for="activity">Atividade</label>
-        <input type="text" class="form-control custom-input" placeholder="Atividade exercida" id="activity">
+        <input [(ngModel)]="activity" type="text" class="form-control custom-input" placeholder="Atividade exercida"
+          id="activity">
       </div>
       <app-secondary-button></app-secondary-button>
     </div>
     <div class="group-activity">
       <label class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
+        @for (activity of activities; track $index) {
         <div class="item">
-          <span class="item-text">Configuração com angular CLI</span>
+          <span class="item-text">{{activity}}</span>
           <div class="remove-btn">
             <i class="ph-bold ph-x"></i>
           </div>
         </div>
+        @if ($index +1 !== activities.length) {
         <hr>
+        }
+        }
       </div>
     </div>
     <app-primary-button></app-primary-button>
