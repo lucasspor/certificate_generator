@@ -1,4 +1,6 @@
-<button class="custom-button">
-  <i class="ph ph-plus"></i>
-  Label
+<button class="custom-button" [style]="disable ? {'opacity' : '50%'} : {}">
+  @if(iconClass){
+    <i [class]="iconClass"></i>
+  }
+  {{buttonText}}
 </button>
