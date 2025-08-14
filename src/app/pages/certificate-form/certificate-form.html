@@ -1,4 +1,4 @@
-<div class="d-flex flex-column align-items-center">
+<form #form="ngForm" novalidate class="d-flex flex-column align-items-center">
   <div class="content-titles">
     <h1 class="fw-bold custom-title">Certificados gerados</h1>
     <p class="mb-4 custom-subtitle">Visualize todos os certificados gerados</p>
@@ -7,20 +7,32 @@
     <h2 class="card-title">Novo certificado</h2>
     <div class="mb-3 wrapper">
       <label class="form-label" for="name">Nome completo</label>
-      <input [(ngModel)]="name" type="text" class="form-control custom-input" id="name" placeholder="Nome do aluno">
+      <input [(ngModel)]="name" #nameRef="ngModel" maxlength="150" required type="text"
+        class="form-control custom-input" id="name" placeholder="Nome do aluno" name="name">
+      @if(validInput(nameRef) ){
       <div class="error-message d-flex align-items-center">
         <i class="ph ph-warning-circle"></i>
-        <p class="m-0">Error message</p>
+        <p class="m-0">O nome do aluno é obrigatório</p>
       </div>
+      }
     </div>
     <div class="mb-3 d-flex align-items-end">
       <div class="flex-grow-1 me-2 wrapper">
         <label class="form-label" for="activity">Atividade</label>
-        <input [(ngModel)]="activity" type="text" class="form-control custom-input" placeholder="Atividade exercida"
-          id="activity">
+        <input [(ngModel)]="activity" #activityRef="ngModel" maxlength="50" required type="text"
+          class="form-control custom-input" placeholder="Atividade exercida" id="activity" name="activity">
+        @if(validInput(activityRef)){
+        <div class="error-message d-flex align-items-center">
+          <i class="ph ph-warning-circle"></i>
+          <p class="m-0">O nome da atividade é obrigatório</p>
+        </div>
+        }
       </div>
-      <app-secondary-button></app-secondary-button>
+      <app-secondary-button [ngStyle]="validInput(activityRef) 
+    ? { 'margin-bottom': '1.65rem' } 
+    : {}"></app-secondary-button>
     </div>
+
     <div class="group-activity">
       <label class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
@@ -39,4 +51,4 @@
     </div>
     <app-primary-button></app-primary-button>
   </div>
-</div>
+</form>
