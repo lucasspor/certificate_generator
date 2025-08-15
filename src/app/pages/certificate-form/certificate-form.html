@@ -41,6 +41,6 @@
         }
       </div>
     </div>
-    <app-primary-button [disable]="!validForm()" buttonText="Gerar certificado"></app-primary-button>
+    <app-primary-button (click)="submit()" [disable]="!validForm()" buttonText="Gerar certificado"></app-primary-button>
   </div>
 </form>

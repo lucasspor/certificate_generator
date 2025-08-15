@@ -4,6 +4,8 @@
     <p class="mb-4 custom-subtitle">Visualize todos os certificados gerados</p>
   </div>
 
+  @if (certificates.length === 0) {
+
     <div class="custom-card w-100">
     <i class="ph ph-certificate"></i>
     <div class="custom-warning-titles">
@@ -13,9 +15,12 @@
     <app-secondary-button buttonText="Gerar certificado" routerLink="/certificates/new"></app-secondary-button>
   </div>
 
-<!-- 
+  } @else {
+
    <div class="list-certificates w-100">
     <app-certificate-item></app-certificate-item>
-  </div> -->
+  </div> 
+  }
+
 
 </div>
