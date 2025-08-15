@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class CertificateForm {
   name: string = ''
   activity: string = ''
-  activities: string[] = ['angular', 'react']
+  activities: string[] = []
 
   validInput(control: NgModel) {
     return control.invalid && control.touched
@@ -21,5 +21,14 @@ export class CertificateForm {
 
   validForm(){
     return this.activities.length > 0 && this.name.length > 0
+  }
+
+  addActvity(){
+    this.activities.push(this.activity.trim())
+    this.activity = ''
+  }
+
+  removeActivity(index: number){
+    this.activities.splice(index, 1)
   }
 }
