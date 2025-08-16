@@ -7,7 +7,7 @@ import { Certificate } from "../interfaces/certificate";
 export class CertificateService {
   certificates: Certificate[] = []
   addCertificate(certificate: Certificate) {
-    this.certificates.push(certificate)
-    console.log(this.certificates)
+    this.certificates.push({...certificate})
+    localStorage.setItem("certificates",JSON.stringify(this.certificates))
   }
 }

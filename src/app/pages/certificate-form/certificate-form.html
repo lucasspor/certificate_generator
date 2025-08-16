@@ -22,7 +22,7 @@
         <input [(ngModel)]="activity" #activityRef="ngModel" maxlength="50" required type="text"
           class="form-control custom-input" placeholder="Atividade exercida" id="activity" name="activity">
       </div>
-      <app-secondary-button (click)="addActvity()" [disable]="activity.length === 0"  iconClass="ph ph-plus" buttonText="Adicionar "></app-secondary-button>
+      <app-secondary-button (click)="addActvity()" [disable]="!activity || activity.length === 0"  iconClass="ph ph-plus" buttonText="Adicionar "></app-secondary-button>
     </div>
 
     <div class="group-activity">
