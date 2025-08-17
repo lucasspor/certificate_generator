@@ -1,9 +1,9 @@
 # 📜 Certificate Generator
 
-Um gerador de certificados desenvolvido em **Angular** durante o curso introdutório da [Rocketseat](https://rocketseat.com.br/).  
-O objetivo do projeto é apresentar os conceitos fundamentais do framework por meio da construção de uma aplicação prática e interativa.
+A certificate generator built with **Angular**, developed during Rocketseat’s introductory course.  
+The goal of this project is to put Angular fundamentals into practice by creating an interactive and real-world application.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - [Angular 20.1.4](https://angular.dev/)
 - [Bootstrap 5](https://getbootstrap.com/)
