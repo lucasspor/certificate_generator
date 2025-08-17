@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SecondaryButon } from "../../_components/secondary-button/secondary-button";
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CertificateService } from '../../_services/certificate.services';
 import { Certificate } from '../../interfaces/certificate';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-certificate',
@@ -13,6 +14,9 @@ import { Certificate } from '../../interfaces/certificate';
 export class CertificateComponent implements OnInit {
   id: string | null = null 
   certificate: Certificate | undefined
+
+  @ViewChild('certificateContainer') certificateElement!: ElementRef
+
   constructor(private certificateService: CertificateService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -22,5 +26,20 @@ export class CertificateComponent implements OnInit {
       console.log(this.certificate)
     })
 
+  }
+
+  downloadCertificate(){
+    if(this.certificate === undefined){
+      return
+    }
+
+    html2canvas(this.certificateElement.nativeElement, {scale: 2}).then(
+      canvas =>{
+        const link = document.createElement('a')
+        link.href = canvas.toDataURL('image/png')
+        link.download = `certificate_${this.certificate?.name.replaceAll(' ', '_')}.png`
+        link.click()
+      }
+    )
   }
 }
