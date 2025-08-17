@@ -11,6 +11,11 @@ The goal of this project is to put Angular fundamentals into practice by creatin
 - [UUID](https://www.npmjs.com/package/uuid)
 - [TypeScript](https://www.typescriptlang.org/)
 
+## 🌐 Live Demo
+
+You can see the deployed application on Netlify:  
+[https://my-certificate-generator.netlify.app/](https://my-certificate-generator.netlify.app/)
+
 ## Development server
 
 To start a local development server, run:
