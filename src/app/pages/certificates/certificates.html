@@ -17,7 +17,7 @@
   } @else {
    <div class="list-certificates w-100">
     @for (certificate of certificates; track $index) {
-      <app-certificate-item  [studentName]="certificate.name"  [issueDate]="certificate.issueDate"></app-certificate-item>
+      <app-certificate-item  [studentName]="certificate.name"  [issueDate]="certificate.issueDate" [id]="certificate.id"></app-certificate-item>
     }
   </div> 
   }

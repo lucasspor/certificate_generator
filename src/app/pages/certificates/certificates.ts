@@ -16,7 +16,7 @@ export class Certificates implements OnInit{
   }
 
   get certificates() {
-    return this.certificateService.certificates;
+    return this.certificateService.certificates
   }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 export class CertificateItem {
   @Input() studentName: string = ''
   @Input() issueDate: string = ''
-  @Input() id: number = 0
+  @Input() id: string = ''
   
 
   constructor(private router: Router) {

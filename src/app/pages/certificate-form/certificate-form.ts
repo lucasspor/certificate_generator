@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Certificate } from '../../interfaces/certificate';
 import { CertificateService } from '../../_services/certificate.services';
 import { v4 as uuidv4 } from 'uuid'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-certificate-form',
@@ -15,7 +16,7 @@ import { v4 as uuidv4 } from 'uuid'
 })
 export class CertificateForm {
 
-  constructor(private certificateService: CertificateService) {
+  constructor(private certificateService: CertificateService, private route: Router) {
 
   }
 
@@ -60,8 +61,10 @@ export class CertificateForm {
     this.certificate.id = uuidv4()
     this.certificateService.addCertificate(this.certificate)
 
-    this.certificate = this.initialStateCertificate()
-    this.form.resetForm()
+    this.route.navigate(['certificate', this.certificate.id])
+
+    // this.certificate = this.initialStateCertificate()
+    // this.form.resetForm()
   }
 
   currentDate() {
