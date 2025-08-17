@@ -20,6 +20,6 @@ export class Certificates implements OnInit{
   }
 
   ngOnInit(): void {
-      this.certificateService.certificates
+    this.certificates
   }
 }
