@@ -1,6 +1,15 @@
-# CertificateGenerator
+# 📜 Certificate Generator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Um gerador de certificados desenvolvido em **Angular** durante o curso introdutório da [Rocketseat](https://rocketseat.com.br/).  
+O objetivo do projeto é apresentar os conceitos fundamentais do framework por meio da construção de uma aplicação prática e interativa.
+
+## 🚀 Tecnologias
+
+- [Angular 20.1.4](https://angular.dev/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [HTML2Canvas](https://github.com/niklasvh/html2canvas)
+- [UUID](https://www.npmjs.com/package/uuid)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Development server
 
